@@ -19,7 +19,7 @@ Models used:
       For all the default parameters.
       We ran it for 40 differents training splits from 50 to 90% as the training split
       and we concluded that for the data, the best training split is at 86% precentage of training data, predicting on the testing data giving an accuracy of 80.979%.
-   3. **With GridsearchCV**
+   3. **With GridsearchCV** (CV=5,default)
       The paramters passed were for different learning rates at 86% training split.
       ```python
       alpha = [1,0.5,0.1,0.01,0.001,0.0001]
@@ -27,7 +27,7 @@ Models used:
       ```
       We got the maximum accuracy at 83.717% for alpha = 0.1
 2. *Support Vector Classifier (sklearn.SVM.SVC)*
-   1. **With GridsearchCV**
+   1. **With GridsearchCV** (CV=5,default)
       We ran it for the following paramters with gridsearchcv
       ```python
       {
@@ -41,13 +41,13 @@ Models used:
    1. **Without GridsearchCV**
       We ran it for 74 unique neigbors ranging from 1 to 150 with all odd numbers.
       We received the highest accuracy for k=7 neighbors.
-   2. **With GridSearchCV**
+   2. **With GridSearchCV** (CV=3,custom)
       We received the maximum accuracy of 82.947%
 4. *Multilayer Perceptron Model (sklearn.neural_network.MLPClassifier)*
    1. **Without GridSearchCV**
       We ran the model to get the best train split which we got at 65% training data and 35% testing splits
       We received the maximum accuracy of 89.428% for the same.
-   2. **With GridSearchCV**
+   2. **With GridSearchCV** (CV=3,custom)
       We ran the model for the following parameters.
       ```
       params = {
@@ -62,7 +62,12 @@ Models used:
       ```
 5. *Decision Tree Classifier (sklearn.tree.DecisionTreeClassifier)*
    1. **Without GridSearchCV**
-      We ran the model for gini and entropy criterions.The model accuracy tops at 90%(highest split) was 78.45% and 78.43% respectively 
+      We ran the model for gini and entropy criterions.The model accuracy tops at 90%(highest split) was 78.45% and 78.43% respectively
+
+   2. **With GridSearchCV** (CV=100,custom)
+      We ran the models for the following parameters.
+      with both 'gini' and 'entropy'
+      and the best accuracy was at 89.28 with 'entropy' criterion 
 
 
 
