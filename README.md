@@ -40,7 +40,29 @@ Models used:
 3. *K-Nearest Neighbours (sklearn.neighbors.KNN)*
    1. **Without GridsearchCV**
       We ran it for 74 unique neigbors ranging from 1 to 150 with all odd numbers.
-      
+      We received the highest accuracy for k=7 neighbors.
+   2. **With GridSearchCV**
+      We received the maximum accuracy of 82.947%
+4. *Multilayer Perceptron Model (sklearn.neural_network.MLPClassifier)*
+   1. **Without GridSearchCV**
+      We ran the model to get the best train split which we got at 65% training data and 35% testing splits
+      We received the maximum accuracy of 89.428% for the same.
+   2. **With GridSearchCV**
+      We ran the model for the following parameters.
+      ```
+      params = {
+            'solver': ['lbfgs', 'sgd', 'adam'],
+            'hidden_layer_sizes':[(4), (5,),(6,), (7,)],
+            'activation':['identity', 'logistic', 'tanh', 'relu']
+      }
+      ```
+      The best accuracy at 88.107% came at the following parameter (at 85% training split Without the gridsearchCV as it was with 65% training split)
+      ```
+      {'activation': 'logistic', 'hidden_layer_sizes': (6,), 'solver': 'lbfgs'}
+      ```
+5. *Decision Tree Classifier (sklearn.tree.DecisionTreeClassifier)*
+   1. **Without GridSearchCV**
+      We ran the model for gini and entropy criterions.The model accuracy tops at 90%(highest split) was 78.45% and 78.43% respectively 
 
 
 
