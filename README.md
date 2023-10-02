@@ -49,7 +49,7 @@ Models used:
       We received the maximum accuracy of 89.428% for the same.
    2. **With GridSearchCV** (CV=3,custom)
       We ran the model for the following parameters.
-      ```
+      ```python
       params = {
             'solver': ['lbfgs', 'sgd', 'adam'],
             'hidden_layer_sizes':[(4), (5,),(6,), (7,)],
@@ -57,7 +57,7 @@ Models used:
       }
       ```
       The best accuracy at 88.107% came at the following parameter (at 85% training split Without the gridsearchCV as it was with 65% training split)
-      ```
+      ```python
       {'activation': 'logistic', 'hidden_layer_sizes': (6,), 'solver': 'lbfgs'}
       ```
 5. *Decision Tree Classifier (sklearn.tree.DecisionTreeClassifier)*
