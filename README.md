@@ -1,4 +1,5 @@
 # Hate_speech_recognition
+[dataset card on huggingface](https://huggingface.co/datasets/hate_speech_offensive)
 
 We have created a model to classify text into 3 different classes: 
    0 - hate speech 
