@@ -37,7 +37,10 @@ Models used:
          'kernel': ['rbf','linear','poly'],
       }
       ```
-      We got the maximum accuracy at 86% training split with
+      We got the maximum accuracy at 86% training split of 90.547% with following paramters
+      ```
+      {'C': 1, 'gamma': 1, 'kernel': 'linear'}
+      ```
 3. *K-Nearest Neighbours (sklearn.neighbors.KNN)*
    1. **Without GridsearchCV**
       We ran it for 74 unique neigbors ranging from 1 to 150 with all odd numbers.
